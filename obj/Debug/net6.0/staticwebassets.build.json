@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AtcI837f+Lw4PBmHyQKBXtqigSOkYYgyOPfcywpmqD0=",
+  "Source": "KafkaConsumerAPI",
+  "BasePath": "_content/KafkaConsumerAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
