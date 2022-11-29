@@ -9,8 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-IPostRepository posts = new PostRepository();
-
+builder.Services.AddSingleton<IPostRepository, PostRepository>();
 
 var app = builder.Build();
 
@@ -24,6 +23,4 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-Task.Run(()=>posts.AddPost());
 app.Run();

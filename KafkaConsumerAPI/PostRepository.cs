@@ -7,6 +7,12 @@ namespace KafkaConsumerAPI
     {
         private static ISet<Post> _posts = new HashSet<Post>();
 
+        public PostRepository()
+        {
+            Task.Run(() => AddPost());
+        }
+
+
         public IEnumerable<Post> GetAll()
         {
             return _posts;
