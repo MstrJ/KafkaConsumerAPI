@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IPostRepository, PostRepository>();
-builder.Services.BuildServiceProvider().GetRequiredService<IPostRepository>();
+builder.Services.BuildServiceProvider().GetRequiredService<IPostRepository>(); // kiedy to jest off to swagger sie nie odpala jeszcze, html nie dziala
 builder.Services.AddScoped<IEmailService, EmailService>();
 var app = builder.Build();
 

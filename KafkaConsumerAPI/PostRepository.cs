@@ -25,13 +25,14 @@ namespace KafkaConsumerAPI
         {
             var config = new ConsumerConfig
             {
+                //BootstrapServers = "kafka.host:9092",
                 //BootstrapServers = "kafka.docker.internal:9092",
                 //BootstrapServers = "host.docker.internal:9092",
                 //BootstrapServers = "host.docker.internal:9094",
                 //BootstrapServers = "localhost:9092",
-                //BootstrapServers = "localhost:9094", // dziala w vs 2022
-                BootstrapServers = "kafka:9092",
                 //BootstrapServers = "kafka:9094",
+                //BootstrapServers = "localhost:9094", // dziala w vs
+                BootstrapServers = "kafka:9092",
 
                 //SecurityProtocol = SecurityProtocol.Ssl,
                 GroupId = "newPost",
