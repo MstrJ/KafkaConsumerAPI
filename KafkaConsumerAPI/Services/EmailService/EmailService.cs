@@ -19,7 +19,7 @@ namespace KafkaConsumerAPI.Services.EmailService
 
         public void SendEmail(EmailDto request)
         {
-            // Wysylanie do localhost do bazy danych historia wyslanych mailio
+            // Wysylanie do localhost do bazy danych historia wyslanych maili
 
 
             var email = new MimeMessage();

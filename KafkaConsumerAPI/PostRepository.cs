@@ -25,7 +25,15 @@ namespace KafkaConsumerAPI
         {
             var config = new ConsumerConfig
             {
-                BootstrapServers = "localhost:9094",
+                //BootstrapServers = "kafka.docker.internal:9092",
+                //BootstrapServers = "host.docker.internal:9092",
+                //BootstrapServers = "host.docker.internal:9094",
+                //BootstrapServers = "localhost:9092",
+                //BootstrapServers = "localhost:9094", // dziala w vs 2022
+                BootstrapServers = "kafka:9092",
+                //BootstrapServers = "kafka:9094",
+
+                //SecurityProtocol = SecurityProtocol.Ssl,
                 GroupId = "newPost",
                 AutoOffsetReset = AutoOffsetReset.Earliest
             };
@@ -46,7 +54,6 @@ namespace KafkaConsumerAPI
                         var result = JsonConvert.DeserializeObject<Post>(message);
 
                         _posts.Add(result);
-                        _emailService.SendEmail(new EmailDto("postbloggergit@gmai.com", "Automatic Kafka logger", message));
                         Console.WriteLine(message);
                     }
                     catch (KafkaException e)
